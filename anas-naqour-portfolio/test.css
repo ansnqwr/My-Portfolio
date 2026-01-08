@@ -785,8 +785,8 @@ h4 { font-size: 1.2rem; }
 }
 
 .about-image {
-    position: sticky;
-    top: 100px;
+    /* position: sticky;
+    top: 100px; */
 }
 
 .image-wrapper {
