@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anas Naqour | ASP.NET Core Backend Developer</title>
+    <meta
+      name="description"
+      content="Junior Backend Developer specializing in ASP.NET Core, C#, and scalable backend systems. Seeking backend development opportunities."
+    />
+    <meta
+      name="keywords"
+      content="Backend Developer, ASP.NET Core, C#, SQL Server, RESTful APIs, Syria Developer"
+    />
+    <meta name="author" content="Anas Naqour" />
+
+    <!-- Open Graph for LinkedIn/HR -->
+    <meta
+      property="og:title"
+      content="Anas Naqour - ASP.NET Core Backend Developer"
+    />
+    <meta
+      property="og:description"
+      content="Junior Backend Developer specializing in building clean, performant backend systems with 1 year experience."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Security Headers -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline';"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+
+    <link rel="stylesheet" href="test.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Favicon for Professional Look -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%236C63FF%22/><text x=%2250%22 y=%2260%22 font-family=%22Arial%22 font-size=%2250%22 text-anchor=%22middle%22 fill=%22white%22>A</text></svg>"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%236C63FF%22/><text x=%2250%22 y=%2260%22 font-family=%22Arial%22 font-size=%2250%22 text-anchor=%22middle%22 fill=%22white%22>A</text></svg>"
+    />
+
+    <!-- Schema.org JSON-LD for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anas Naqour",
+        "jobTitle": "Junior Backend Developer",
+        "url": "https://anasnaqour.com",
+        "sameAs": [
+          "https://github.com/ansnqwr",
+          "https://www.linkedin.com/in/anas-naqour-aa5191390"
+        ],
+        "knowsAbout": [
+          "ASP.NET Core",
+          "C#",
+          "SQL Server",
+          "RESTful APIs",
+          "Software Architecture"
+        ],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Damascus University"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "Syria"
+        }
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("U2BMQ0LieUL1zcFFo"); 
+        })();
+    </script>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+    <!-- Security Notice (Optional) -->
+    <div class="security-notice" id="securityNotice">
+      <div class="container">
+        <p>
+          <i class="fas fa-shield-alt"></i> This portfolio uses secure
+          connections and follows best security practices.
+        </p>
+        <button class="close-notice" id="closeNotice">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <a href="#" class="logo" aria-label="Anas Naqour Portfolio Home">
+            <span class="logo-icon">A</span>
+            <span class="logo-text"
+              >Anas<span class="logo-highlight">Naqour</span></span
+            >
+          </a>
+          <ul class="nav-menu">
+            <li>
+              <a href="#home" class="nav-link active"
+                ><i class="fas fa-home"></i> Home</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="nav-link"
+                ><i class="fas fa-user"></i> About</a
+              >
+            </li>
+            <li>
+              <a href="#skills" class="nav-link"
+                ><i class="fas fa-code"></i> Skills</a
+              >
+            </li>
+            <li>
+              <a href="#projects" class="nav-link"
+                ><i class="fas fa-project-diagram"></i> Projects</a
+              >
+            </li>
+            <li>
+              <a href="#experience" class="nav-link"
+                ><i class="fas fa-briefcase"></i> Experience</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="nav-link"
+                ><i class="fas fa-envelope"></i> Contact</a
+              >
+            </li>
+          </ul>
+          <div class="nav-actions">
+            <!-- Download CV Button -->
+            <a href="#download-cv" class="btn-download-cv" id="downloadCV">
+              <i class="fas fa-download"></i> CV
+            </a>
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Toggle dark/light mode"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+            <div
+              class="hamburger"
+              id="hamburger"
+              aria-label="Toggle navigation menu"
+            >
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="floating-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+          <div class="shape shape-4"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="badge">Available for Work</div>
+            <h3 class="hero-subtitle">Hello, I'm</h3>
+            <h1 class="hero-title">Anas Naqour</h1>
+            <h2 class="hero-role">
+              <span class="typing-text" id="typingText"></span>
+              <span class="cursor">|</span>
+            </h2>
+            <p class="hero-description">
+              Junior Backend Developer & Full stack Desktop Developer
+              specializing in building clean, performant, and well-architected
+              backend systems using C# and ASP.NET technologies.
+            </p>
+            <div class="hero-stats">
+              <div class="stat">
+                <span class="stat-number" data-count="1">0</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number" data-count="3">0</span>
+                <span class="stat-label">Projects Completed</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number" data-count="100">0</span>
+                <span class="stat-label">% Satisfaction</span>
+              </div>
+            </div>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary">
+                <i class="fas fa-rocket"></i> View Projects
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <i class="fas fa-paper-plane"></i> Hire Me
+              </a>
+              <button class="btn-play-video" id="playVideo">
+                <i class="fas fa-play"></i> Watch Intro
+              </button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="image-container">
+              <div class="image-placeholder"></div>
+              <!-- <div class="image-badge">
+                            <i class="fas fa-medal"></i> ASP.NET Expert
+                        </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Scroll Indicator -->
+      <!-- <div class="scroll-indicator" id="scrollIndicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div> -->
+    </section>
+
+    <!-- Companies Trust Section -->
+    <section class="companies">
+      <div class="container">
+        <h3 class="companies-title">Trusted By</h3>
+        <div class="companies-logos">
+          <div class="logo-item">
+            <i class="fab fa-microsoft"></i>
+            <span>Microsoft Technologies</span>
+          </div>
+          <div class="logo-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Damascus University</span>
+          </div>
+          <div class="logo-item">
+            <i class="fas fa-code"></i>
+            <span>Open Source</span>
+          </div>
+          <div class="logo-item">
+            <i class="fas fa-shield-alt"></i>
+            <span>Secure Systems</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">
+            Passionate about backend architecture and clean code
+          </p>
+        </div>
+        <div class="about-content">
+          <div class="about-image">
+            <div class="image-wrapper">
+              <div class="image-placeholder about-img"></div>
+              <div class="image-frame"></div>
+            </div>
+            <div class="image-info">
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Syria</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Backend Developer</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-text">
+            <h3 class="about-title">Building Scalable Backend Systems</h3>
+            <p>
+              I'm a Junior Backend Developer with 1 year of hands-on experience
+              and a 4th-year Software Engineering student at Damascus
+              University. My focus is on building scalable, maintainable backend
+              systems with strong emphasis on <strong>performance</strong>,
+              <strong>clean code principles</strong>, and
+              <strong>software architecture</strong>.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight">
+                <i class="fas fa-bolt"></i>
+                <div>
+                  <h4>Performance Focused</h4>
+                  <p>Optimized backend systems for maximum efficiency</p>
+                </div>
+              </div>
+              <div class="highlight">
+                <i class="fas fa-sitemap"></i>
+                <div>
+                  <h4>Clean Architecture</h4>
+                  <p>Following SOLID principles and design patterns</p>
+                </div>
+              </div>
+              <div class="highlight">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                  <h4>Secure Coding</h4>
+                  <p>Implementing security best practices</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-progress">
+              <h4>Technical Proficiency</h4>
+              <div class="progress-bar">
+                <div class="progress-label">
+                  <span>ASP.NET Core</span>
+                  <span>85%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" data-width="85"></div>
+                </div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-label">
+                  <span>Database Design</span>
+                  <span>80%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" data-width="80"></div>
+                </div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-label">
+                  <span>Software Architecture</span>
+                  <span>75%</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill" data-width="75"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-buttons">
+              <a href="#contact" class="btn btn-primary">
+                <i class="fas fa-handshake"></i> Let's Work Together
+              </a>
+              <a href="#experience" class="btn btn-outline">
+                <i class="fas fa-history"></i> View Experience
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">Technologies I work with daily</p>
+        </div>
+
+        <div class="skills-filter">
+          <button class="filter-btn active" data-filter="all">
+            All Skills
+          </button>
+          <button class="filter-btn" data-filter="backend">Backend</button>
+          <button class="filter-btn" data-filter="database">Database</button>
+          <button class="filter-btn" data-filter="architecture">
+            Architecture
+          </button>
+          <button class="filter-btn" data-filter="tools">Tools</button>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Backend Skills -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3 class="skill-title">ASP.NET Core</h3>
+            <p class="skill-description">
+              Building RESTful APIs and web applications
+            </p>
+            <div class="skill-level">
+              <div class="level-dots">
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+              <span class="level-text">Advanced</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="backend">
+            <div class="skill-icon">
+              <i class="fab fa-microsoft"></i>
+            </div>
+            <h3 class="skill-title">C# Programming</h3>
+            <p class="skill-description">
+              Object-oriented programming and design patterns
+            </p>
+            <div class="skill-level">
+              <div class="level-dots">
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+              <span class="level-text">Advanced</span>
+            </div>
+          </div>
+
+          <!-- Database Skills -->
+          <div class="skill-card" data-category="database">
+            <div class="skill-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="skill-title">SQL Server</h3>
+            <p class="skill-description">
+              Database design, optimization, and management
+            </p>
+            <div class="skill-level">
+              <div class="level-dots">
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <span class="level-text">Intermediate</span>
+            </div>
+          </div>
+
+          <!-- Architecture Skills -->
+          <div class="skill-card" data-category="architecture">
+            <div class="skill-icon">
+              <i class="fas fa-sitemap"></i>
+            </div>
+            <h3 class="skill-title">Clean Architecture</h3>
+            <p class="skill-description">
+              Implementing SOLID principles and design patterns
+            </p>
+            <div class="skill-level">
+              <div class="level-dots">
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <span class="level-text">Intermediate</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="architecture">
+            <div class="skill-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <h3 class="skill-title">Three-Tier Architecture</h3>
+            <p class="skill-description">
+              Building scalable multi-layer applications
+            </p>
+            <div class="skill-level">
+              <div class="level-dots">
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+              <span class="level-text">Advanced</span>
+            </div>
+          </div>
+
+          <!-- Tools Skills -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon">
+              <i class="fab fa-git-alt"></i>
+            </div>
+            <h3 class="skill-title">Git & GitHub</h3>
+            <p class="skill-description">
+              Version control and collaboration workflows
+            </p>
+            <div class="skill-level">
+              <div class="level-dots">
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+              <span class="level-text">Advanced</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="tools">
+            <div class="skill-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="skill-title">API Development</h3>
+            <p class="skill-description">
+              RESTful API design with documentation
+            </p>
+            <div class="skill-level">
+              <div class="level-dots">
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+              <span class="level-text">Advanced</span>
+            </div>
+          </div>
+
+          <div class="skill-card" data-category="architecture">
+            <div class="skill-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="skill-title">Security</h3>
+            <p class="skill-description">
+              Authentication, authorization, and data protection
+            </p>
+            <div class="skill-level">
+              <div class="level-dots">
+                <span class="dot active"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <span class="level-text">Basic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">Real-world backend systems I've built</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card" data-aos="fade-up">
+            <div class="project-badge">Personal Project</div>
+            <div class="project1-image">
+              <div class="project-img-placeholder"></div>
+              <!-- <div class="project-overlay">
+                            <a href="#" class="project-view" aria-label="View Clinic Management System">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div> -->
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Clinic Management System</h3>
+                <span class="project-year">2025</span>
+              </div>
+              <p class="project-description">
+                Full-stack desktop system for managing clinics with patients,
+                appointments, and medical records management. Features
+                authentication, authorization, and comprehensive validation.
+              </p>
+
+              <div class="project-features">
+                <span class="feature">
+                  <i class="fas fa-check-circle"></i> Three-Tier Architecture
+                </span>
+                <span class="feature">
+                  <i class="fas fa-check-circle"></i> SQL Server Database
+                </span>
+                <span class="feature">
+                  <i class="fas fa-check-circle"></i> Role-based Access
+                </span>
+              </div>
+
+              <div class="project-tech">
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">Windows Forms</span>
+                <span class="tech-tag">SQL Server</span>
+                <span class="tech-tag">Entity Framework</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/ansnqwr/Clinic-Managment-System"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <!-- <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a> -->
+                <!-- <a href="https://github.com/ansnqwr/Clinic-Managment-System" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-file-pdf"></i> Documentation
+                            </a> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-badge">Training Project</div>
+            <div class="project2-image">
+              <div class="project-img-placeholder"></div>
+              <!-- <div class="project-overlay">
+                            <a href="#" class="project-view" aria-label="View Driving License System">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div> -->
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Driving License Management System</h3>
+                <span class="project-year">2024</span>
+              </div>
+              <p class="project-description">
+                Training project for managing drivers and driving licenses with
+                focus on backend logic and complex database design using
+                Three-Tier Architecture.
+              </p>
+
+              <div class="project-features">
+                <span class="feature">
+                  <i class="fas fa-check-circle"></i> Complex Relationships
+                </span>
+                <span class="feature">
+                  <i class="fas fa-check-circle"></i> Data Validation
+                </span>
+                <span class="feature">
+                  <i class="fas fa-check-circle"></i> Report Generation
+                </span>
+              </div>
+
+              <div class="project-tech">
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">Windows Forms</span>
+                <span class="tech-tag">SQL Server</span>
+                <span class="tech-tag">Stored Procedures</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/ansnqwr/Driving-Vehicle-License-Department"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <!-- <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-badge">Concept Project</div>
+            <div class="project-image">
+              <div class="project-img-placeholder">
+                <i class="fas fa-server"></i>
+              </div>
+              <!-- <div class="project-overlay">
+                            <a href="#" class="project-view" aria-label="View API System Concept">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div> -->
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Backend API System</h3>
+                <span class="project-year">2025</span>
+              </div>
+              <p class="project-description">
+                RESTful backend API concept focusing on clean architecture,
+                performance optimization, and scalability. Designed for future
+                ASP.NET Core expansion.
+              </p>
+
+              <div class="project-features">
+                <span class="feature">
+                  <i class="fas fa-check-circle"></i>Three Tier Architecture
+                </span>
+                <span class="feature">
+                  <i class="fas fa-check-circle"></i> Performance Focus
+                </span>
+                <span class="feature">
+                  <i class="fas fa-check-circle"></i> Scalable Design
+                </span>
+              </div>
+
+              <div class="project-tech">
+                <span class="tech-tag">ASP.NET Core</span>
+                <span class="tech-tag">REST API</span>
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">Swagger</span>
+              </div>
+
+              <div class="project-links">
+                <!-- <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-eye"></i> View Concept
+                            </a>
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-file-archive"></i> Architecture PDF
+                            </a> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-badge">Training Project</div>
+            <div class="project4-image">
+                    
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Bank Management System</h3>
+                <span class="project-year">2024</span>
+              </div>
+              <p class="project-description">
+                (Console App),This is a comprehensive system for managing bank customers and
+                users, designed in C++ using Structural Programming. The system
+                provides a Command Line Interface (CLI) that enables employees
+                to manage customer accounts, execute financial transactions, and
+                manage user permissions.
+              </p>
+
+              <div class="project-features">
+                <span class="feature">
+                  <i class="fas fa-check-circle"></i> Authentication and
+                  Permissions System
+                </span>
+                <span class="feature">
+                  <i class="fas fa-check-circle"></i> Customer Management
+                </span>
+                <span class="feature">
+                  <i class="fas fa-check-circle"></i> 🏗️ Technical Structure
+                </span>
+              </div>
+
+              <div class="project-tech">
+                <span class="tech-tag">C++</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/ansnqwr/Bank-System"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fas fa-eye"></i> View code
+                </a>
+          
+              </div>
+            </div>
+          </div>
+
+
+            <!-- Project 5 -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-badge">Training Project</div>
+            <div class="project5-image">
+          
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Tic Tac Toe Game</h3>
+                <span class="project-year">2024</span>
+              </div>
+              <p class="project-description">
+                Desctop App, A simple Tic Tac Toe game implemented in C# using Windows Forms.
+                The game allows two players to take turns marking spaces in a 3x3
+                grid or one player with PC, the objective of getting three of their marks in a
+                horizontal, vertical, or diagonal row to win the game.
+              </p>
+
+              <div class="project-features">
+                <span class="feature">
+                  <i class="fas fa-check-circle"></i> Tow Modes
+                </span>
+                <span class="feature">
+                  <i class="fas fa-check-circle"></i> (one VS one) or (one VS PC)
+                </span>
+                <!-- <span class="feature">
+                  <i class="fas fa-check-circle"></i> 🏗️ Technical Structure
+                </span> -->
+              </div>
+
+              <div class="project-tech">
+                <span class="tech-tag">C#</span><span class="tech-tag">Windows Forms</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/ansnqwr/Tic-Tac-Toe-Game"
+                  class="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fas fa-eye"></i> View code
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-cta">
+          <a href="#contact" class="btn btn-primary btn-large">
+            <i class="fas fa-handshake"></i> Want a Similar Project?
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Experience & Education</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">My professional journey</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-date">2022 – Present</div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Software Engineering Student</h3>
+                <span class="timeline-badge">Education</span>
+              </div>
+              <h4 class="timeline-subtitle">Damascus University</h4>
+              <p>
+                Studying core software engineering concepts including
+                algorithms, data structures, software design patterns, and
+                system architecture. Building real-world backend systems as part
+                of coursework.
+              </p>
+              <div class="timeline-skills">
+                <span class="skill">Software Engineering</span>
+                <span class="skill">Algorithms</span>
+                <span class="skill">System Design</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-date">2025 – Present</div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Junior Backend Developer</h3>
+                <span class="timeline-badge">Professional</span>
+              </div>
+              <h4 class="timeline-subtitle">Personal Projects & Freelance</h4>
+              <p>
+                Designed and developed backend systems using C# with focus on
+                performance, clean architecture, and maintainability. Gained
+                hands-on experience with databases, RESTful APIs, and software
+                architecture patterns.
+              </p>
+              <div class="timeline-skills">
+                <span class="skill">ASP.NET Core</span>
+                <span class="skill">SQL Server</span>
+                <span class="skill">Clean Architecture</span>
+                <span class="skill">API Development</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div class="modal" id="videoModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Introduction Video</h3>
+          <button class="modal-close" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="video-placeholder">
+            <i class="fas fa-play-circle"></i>
+            <p>Introduction video coming soon</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download CV Modal -->
+    <div class="modal" id="cvModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Download CV</h3>
+          <button class="modal-close" id="closeCvModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="cv-options">
+            <div class="cv-option">
+              <i class="fas fa-file-pdf"></i>
+              <h4>Professional CV (PDF)</h4>
+              <p>Optimized for ATS systems</p>
+              <button class="btn btn-primary" id="downloadPdf">
+                Download PDF
+              </button>
+            </div>
+            <div class="cv-option">
+              <i class="fas fa-file-word"></i>
+              <h4>Editable Version (DOCX)</h4>
+              <p>For customization</p>
+              <button class="btn btn-secondary" id="downloadDocx">
+                Download DOCX
+              </button>
+            </div>
+          </div>
+          <div class="cv-security">
+            <i class="fas fa-shield-alt"></i>
+            <p>All downloads are secure and virus-free</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Ready to build something amazing together?</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form-container" data-aos="fade-right">
+                    <h3 class="form-title">Send Me a Message</h3>
+                    <form class="contact-form" id="contactForm" method="POST" novalidate>
+                        <div class="form-group">
+                            <label for="name">
+                                <i class="fas fa-user"></i> Full Name *
+                            </label>
+                            <input type="text" id="name" name="name" required minlength="2" placeholder="Your full name">
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i> Email Address *
+                            </label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">
+                                <i class="fas fa-building"></i> Company (Optional)
+                            </label>
+                            <input type="text" id="company" name="company" placeholder="Your company name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">
+                                <i class="fas fa-tag"></i> Subject *
+                            </label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="job">Job Opportunity</option>
+                                <option value="project">Project Inquiry</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">
+                                <i class="fas fa-comment"></i> Message *
+                            </label>
+                            <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Tell me about your project or opportunity..."></textarea>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+                        
+                        <div class="form-security">
+                            <i class="fas fa-lock"></i>
+                            <span>Your information is secure and encrypted</span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-info" data-aos="fade-left">
+                    <div class="contact-card">
+                        <h3 class="contact-title">Contact Information</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <h4>Email</h4>
+                                <a href="mailto:ansnqwr743@gmail.com" class="contact-link">ansnqwr743@gmail.com</a>
+                                <small>Response within 24 hours</small>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <h4>Phone / WhatsApp</h4>
+                                <a href="tel:+963964652593" class="contact-link">+963 964 652 593</a>
+                                <small>Available for calls</small>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <h4>Location</h4>
+                                <p>Syria / Damascuse</p>
+                                <small>Open to remote positions worldwide</small>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <h4>Availability</h4>
+                                <p>Immediately Available</p>
+                                <small>Full-time or contract positions</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-card">
+                        <h3 class="social-title">Connect With Me</h3>
+                        <div class="social-icons">
+                            <a href="https://github.com/ansnqwr" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/anas-naqour-aa5191390" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <!-- <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                                <span>YouTube</span>
+                            </a> -->
+    <!-- <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Stack Overflow">
+                                <i class="fab fa-stack-overflow"></i>
+                                <span>Stack Overflow</span>
+                            </a> -->
+    <!-- </div>
+                    </div>
+                    
+                    <div class="cta-card">
+                        <h3>Why Work With Me?</h3>
+                        <ul class="cta-list">
+                            <li><i class="fas fa-check"></i> Clean, documented code</li>
+                            <li><i class="fas fa-check"></i> Strong architecture focus</li>
+                            <li><i class="fas fa-check"></i> Performance optimization</li>
+                            <li><i class="fas fa-check"></i> Security best practices</li>
+                            <li><i class="fas fa-check"></i> Timely delivery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">
+            Ready to build something amazing together?
+          </p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-form-container">
+            <h3 class="form-title">Send Me a Message</h3>
+
+            <!-- الفورم مع FormSubmit.co -->
+            <form
+              class="contact-form"
+              id="contactForm"
+              method="POST"
+            >
+              <!-- ========== FORMSUBMIT.CO SETTINGS ========== -->
+              <!-- هذه الحقول المخفية للتحكم في FormSubmit.co -->
+
+              <!-- 1. عنوان الرسالة في بريدك -->
+              <input
+                type="hidden"
+                name="_subject"
+                value="🎯 New Message - Anas Naqour Portfolio"
+              />
+
+              <!-- 2. القالب - اختر: basic, table, box (أنصح ب table) -->
+              <input type="hidden" name="_template" value="table" />
+
+              <!-- 3. إيقاف CAPTCHA الافتراضي (يمكن تفعيله لاحقاً) -->
+              <input type="hidden" name="_captcha" value="false" />
+
+              <!-- 4. صفحة الشكر بعد الإرسال (اختياري) -->
+              <input
+                type="hidden"
+                name="_next"
+                value="https://yourwebsite.com/thank-you.html"
+              />
+
+              <!-- 5. الرد التلقائي للمستخدم -->
+              <input
+                type="hidden"
+                name="_autoresponse"
+                value="Thank you for contacting me! I have received your message and will get back to you within 24 hours. - Anas Naqour"
+              />
+
+              <!-- 6. honey pot للحماية من البوتات -->
+              <input type="text" name="_honey" style="display: none" />
+
+              <!-- 7. تعطيل CSS الخاص بـ FormSubmit.co -->
+              <input type="hidden" name="_css" value="false" />
+
+              <!-- 8. إضافة رابط إلى موقعك في البريد -->
+              <input type="hidden" name="_url" value="https://anasnaqour.com" />
+
+              <!-- ========== YOUR FORM FIELDS ========== -->
+
+              <!-- حقل الاسم -->
+              <div class="form-group">
+                <label for="name">
+                  <i class="fas fa-user"></i> Full Name *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  minlength="2"
+                  maxlength="100"
+                  placeholder="Your full name"
+                />
+                <div class="error-message" id="nameError"></div>
+              </div>
+
+              <!-- حقل البريد الإلكتروني -->
+              <div class="form-group">
+                <label for="email">
+                  <i class="fas fa-envelope"></i> Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="your.email@example.com"
+                />
+                <div class="error-message" id="emailError"></div>
+              </div>
+
+              <!-- حقل الشركة (اختياري) -->
+              <div class="form-group">
+                <label for="company">
+                  <i class="fas fa-building"></i> Company (Optional)
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder="Your company name"
+                />
+              </div>
+
+              <!-- حقل الموضوع -->
+              <div class="form-group">
+                <label for="subject">
+                  <i class="fas fa-tag"></i> Subject *
+                </label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select a subject</option>
+                  <option value="Job Opportunity">💼 Job Opportunity</option>
+                  <option value="Project Inquiry">🚀 Project Inquiry</option>
+                  <option value="Collaboration">🤝 Collaboration</option>
+                  <option value="Consultation">💡 Consultation</option>
+                  <option value="Other">❓ Other</option>
+                </select>
+              </div>
+
+              <!-- حقل الرسالة -->
+              <div class="form-group">
+                <label for="message">
+                  <i class="fas fa-comment"></i> Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  minlength="10"
+                  maxlength="2000"
+                  placeholder="Tell me about your project, opportunity, or collaboration idea..."
+                ></textarea>
+                <div class="error-message" id="messageError"></div>
+              </div>
+
+              <!-- معلومات الأمان -->
+              <div class="form-security">
+                <i class="fas fa-lock"></i>
+                <span>Your information is secure and encrypted</span>
+              </div>
+
+              <!-- زر الإرسال -->
+              <button
+                type="submit"
+                class="btn btn-primary btn-block"
+                id="submitBtn"
+              >
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+
+              <!-- رسالة البديل -->
+              <p class="alternative-contact">
+                <small>
+                  <i class="fas fa-info-circle"></i>
+                  Prefer direct contact? Email me at
+                  <a href="mailto:ansnqwr743@gmail.com">ansnqwr743@gmail.com</a>
+                </small>
+              </p>
+            </form>
+          </div>
+
+          <div class="contact-info" data-aos="fade-left">
+            <div class="contact-card">
+              <h3 class="contact-title">Contact Information</h3>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-detail">
+                  <h4>Email</h4>
+                  <a href="mailto:ansnqwr743@gmail.com" class="contact-link"
+                    >ansnqwr743@gmail.com</a
+                  >
+                  <small>Response within 24 hours</small>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-detail">
+                  <h4>Phone / WhatsApp</h4>
+                  <a href="tel:+963964652593" class="contact-link"
+                    >+963 964 652 593</a
+                  >
+                  <small>Available for calls</small>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-detail">
+                  <h4>Location</h4>
+                  <p>Syria / Damascuse</p>
+                  <small>Open to remote positions worldwide</small>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="contact-detail">
+                  <h4>Availability</h4>
+                  <p>Immediately Available</p>
+                  <small>Full-time or contract positions</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-card">
+              <h3 class="social-title">Connect With Me</h3>
+              <div class="social-icons">
+                <a
+                  href="https://github.com/ansnqwr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon"
+                  aria-label="GitHub"
+                >
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/anas-naqour-aa5191390"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-icon"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fab fa-linkedin"></i>
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="cta-card">
+              <h3>Why Work With Me?</h3>
+              <ul class="cta-list">
+                <li><i class="fas fa-check"></i> Clean, documented code</li>
+                <li><i class="fas fa-check"></i> Strong architecture focus</li>
+                <li><i class="fas fa-check"></i> Performance optimization</li>
+                <li><i class="fas fa-check"></i> Security best practices</li>
+                <li><i class="fas fa-check"></i> Timely delivery</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <a href="#" class="logo">
+              <span class="logo-icon">A</span>
+              <span class="logo-text"
+                >Anas<span class="logo-highlight">Naqour</span></span
+              >
+            </a>
+            <p class="footer-tagline">
+              Building the backend that powers your success
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Quick Links</h4>
+              <ul>
+                <li>
+                  <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
+                </li>
+                <li>
+                  <a href="#about"
+                    ><i class="fas fa-chevron-right"></i> About</a
+                  >
+                </li>
+                <li>
+                  <a href="#projects"
+                    ><i class="fas fa-chevron-right"></i> Projects</a
+                  >
+                </li>
+                <li>
+                  <a href="#contact"
+                    ><i class="fas fa-chevron-right"></i> Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Services</h4>
+              <ul>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-chevron-right"></i> Backend Development</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-chevron-right"></i> API Development</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-chevron-right"></i> Database Design</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-chevron-right"></i> Code Review</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column">
+              <h4>Legal</h4>
+              <ul>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-chevron-right"></i> Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-chevron-right"></i> Terms of Service</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fas fa-chevron-right"></i> Cookie Policy</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-security">
+            <i class="fas fa-shield-alt"></i>
+            <span>Secure Connection • Encrypted Data</span>
+          </div>
+
+          <p class="copyright">
+            © 2025 <strong>Anas Naqour</strong>. All rights reserved.
+            <span class="footer-separator">|</span>
+            Built with <i class="fas fa-heart"></i> and ASP.NET Core passion
+          </p>
+
+          <a href="#home" class="back-to-top" id="backToTop">
+            <i class="fas fa-chevron-up"></i> Back to Top
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+      <div class="toast-content">
+        <i class="fas fa-check-circle"></i>
+        <span class="toast-message">Message sent successfully!</span>
+      </div>
+    </div>
+
+    <!-- Connection Status -->
+    <div class="connection-status" id="connectionStatus">
+      <i class="fas fa-wifi"></i>
+      <span>You're online</span>
+    </div>
+
+    <script src="test.js"></script>
+  </body>
+</html>
